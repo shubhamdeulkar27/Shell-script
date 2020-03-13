@@ -5,65 +5,41 @@
 	ran3=$((100+RANDOM%900))
 	ran4=$((100+RANDOM%900))
 	ran5=$((100+RANDOM%900))
-
-	min=0
-	MID=500
-	max=0
-	#FOR FIRST RANDOM NUMBER
-	if [ $ran1 -gt $MID ]
+	#For Maximum
+	if [[ $ran1 -gt $ran2 ]] && [[ $ran1 -gt $ran3 ]] && [[ $ran1 -gt $ran4 ]] && [[ $ran1 -gt $ran5 ]]
 	then
 		max=$ran1
-	elif [ $ran1 -lt $MID ]
-	then
-		min=$ran1
-	else
-		echo $ran1 is MID
-	fi
-
-	#FOR SECOND RANDOM NUMBER
-
-	if [ $ran2 -gt $MID ]
+	elif [[ $ran2 -gt $ran1 ]] && [[ $ran2 -gt $ran3 ]] && [[ $ran2 -gt $ran4 ]] && [[ $ran2 -gt $ran5 ]]
 	then
 		max=$ran2
-	elif [ $ran2 -lt $MID ]
-	then
-		min=$ran2
-	else
-		echo $ran2 is MID
-	fi
-
-	#FOR THIRD RANDOM NUMBER
-
-	if [ $ran3 -gt $MID ]
+	elif [[ $ran3 -gt $ran1 ]] && [[ $ran3 -gt $ran2 ]] && [[ $ran3 -gt $ran4 ]] && [[ $ran3 -gt $ran5 ]]
 	then
 		max=$ran3
-	elif [ $ran3 -lt $MID ]
-	then
-		min=$ran3
-	else
-		echo $ran3 is MID
-	fi
-
-	#FOR FOURTH RANDOM NUMBER
-
-	if [ $ran4 -gt $MID ]
+	elif [[ $ran4 -gt $ran1 ]] && [[ $ran4 -gt $ran2 ]] && [[ $ran4 -gt $ran3 ]] && [[ $ran4 -gt $ran5 ]]
 	then
 		max=$ran4
-	elif [ $ran4 -lt $MID ]
-	then
-		min=$ran4
-	else
-		echo $ran4 is MID
-	fi
-
-	#FOR FIFTH RANDOM NUMBER
-
-	if [ $ran5 -gt $MID ]
+	elif [[ $ran5 -gt $ran1 ]] && [[ $ran5 -gt $ran2 ]] && [[ $ran5 -gt $ran3 ]] && [[ $ran5 -gt $ran4 ]]
 	then
 		max=$ran5
-	elif [ $ran5 -lt $MID ]
+	fi
+
+	#For Minimum
+	if [[ $ran1 -lt $ran2 ]] && [[ $ran1 -lt $ran3 ]] && [[ $ran1 -lt $ran4 ]] && [[ $ran1 -lt $ran5 ]]
+	then
+		min=$ran1
+	elif [[ $ran2 -lt $ran1 ]] && [[ $ran2 -lt $ran3 ]] && [[ $ran2 -lt $ran4 ]] && [[ $ran2 -lt $ran5 ]]
+	then
+		min=$ran2
+	elif [[ $ran3 -lt $ran1 ]] && [[ $ran3 -lt $ran2 ]] && [[ $ran3 -lt $ran4 ]] && [[ $ran3 -lt $ran5 ]]
+	then
+		min=$ran3
+	elif [[ $ran4 -lt $ran1 ]] && [[ $ran4 -lt $ran2 ]] && [[ $ran4 -lt $ran3 ]] && [[ $ran4 -lt $ran5 ]]
+	then
+		min=$ran4
+	elif [[ $ran5 -lt $ran1 ]] && [[$ran5 -lt $ran2]] && [[ $ran5 -lt $ran3 ]] && [[ $ran5 -lt $ran4 ]]
 	then
 		min=$ran5
-	else
-		echo $ran5 is MID
 	fi
+
+	printf "Maximum is : $max\nMinimum is : $min\n"
+
