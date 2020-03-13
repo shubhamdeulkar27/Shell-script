@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
-	read -p "Enter the Data : " data
+
 	printf "Enter\n1 Feet to Inch\n2 Feet to Meter\n3 Inch to Feet\n4 Meter to Feet\n"
 	read -p "Enter Operation : " op
-
+	read -p "Enter Data : " data
 	case $op in
 				1)
 				res=$(($data*12))
