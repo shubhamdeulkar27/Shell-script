@@ -8,6 +8,7 @@ while [[ $count -le $num ]]
 do
 	(( res=res*2 ))
 	(( count++ ))
+	printf "$res "
 done
 
-printf "$res \n"
+printf "\n"
