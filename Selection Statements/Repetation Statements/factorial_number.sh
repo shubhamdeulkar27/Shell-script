@@ -7,3 +7,4 @@ do
 	(( result=result*i ))
 done
 printf "Factorial is $result \n"
+
