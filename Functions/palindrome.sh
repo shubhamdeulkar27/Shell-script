@@ -2,17 +2,32 @@
 
 read -p "Enter First Number : " num1
 read -p "Enter Second Number : " num2
+
+function isPalindrome(){
+res=0
 sum=0
-while [ $num1 -ne 0 ]
+n1=$1
+n2=$2
+while [ $n1 -ne 0 ]
 do
-	rem=$(( $num1%10 ))
+	rem=$(( $n1%10 ))
 	sum=$(( $sum*10+$rem ))
-	num1=$(( $num1/10 ))
+	n1=$(( $n1/10 ))
 done
 
-if [ $sum -eq $num2 ]
+if [ $sum -eq $n2 ]
 then
-	printf "Numbers are Palindrome"
+	res=1
+	echo "$res"
 else
-	printf "Numbers are Not Palindrome"
+	echo "$res"
+fi
+}
+
+result="$( isPalindrome $num1 $num2)"
+if [ $result -eq 1 ]
+then
+	printf "Number is Palindrome\n"
+else
+	printf "Number is Not Palindrome\n"
 fi
