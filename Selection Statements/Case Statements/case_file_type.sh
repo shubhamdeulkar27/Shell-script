@@ -5,15 +5,20 @@ do
 	#TAKE THE EXTENTION
 	ext=${filename##*\.}
 	case "$ext" in
-		java) echo "$filename : Java Source File"
+		java)
+			 echo "$filename : Java Source File"
 		;;
-		o)	echo "$filename : object File"
+		o)
+			echo "$filename : object File"
 		;;
-		sh) echo "$filename : Shell Script"
+		sh)
+			 echo "$filename : Shell Script"
 		;;
-		txt) echo "$filename : Text File"
+		txt)
+			 echo "$filename : Text File"
 		;;
-		*)	echo "$filename : Not Processed"
+		*)
+			echo "$filename : Not Processed"
 		;;
 	esac
 done
