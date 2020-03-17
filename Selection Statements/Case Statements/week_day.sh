@@ -4,27 +4,27 @@ read -p "Enter the Number : " day
 
 case $day in
 	0)
-	echo "Sunday"
+		echo "Sunday"
 	;;
 	1)
-	echo "Monday"
+		echo "Monday"
 	;;
 	2)
-	echo "Tuesday"
+		echo "Tuesday"
 	;;
 	3)
-	echo "Wednesday"
+		echo "Wednesday"
 	;;
 	4)
-	echo "Thursday"
+		echo "Thursday"
 	;;
 	5)
-	echo "Friday"
+		echo "Friday"
 	;;
 	6)
-	echo "Saturday"
+		echo "Saturday"
 	;;
 	*)
-	echo "Invalid Input"
+		echo "Invalid Input"
 	;;
 esac
