@@ -14,22 +14,22 @@ do
 	dice=$(( 1+RANDOM%6 ))
 	case $dice in
 		1)
-		(( result[$dice]+=1))
+			(( result[$dice]+=1))
 		;;
 		2)
-		(( result[$dice]+=1 ))
+			(( result[$dice]+=1 ))
 		;;
 		3)
-		(( result[$dice]+=1 ))
+			(( result[$dice]+=1 ))
 		;;
 		4)
-		(( result[$dice]+=1 ))
+			(( result[$dice]+=1 ))
 		;;
 		5)
-		(( result[$dice]+=1 ))
+			(( result[$dice]+=1 ))
 		;;
 		6)
-		(( result[$dice]+=1 ))
+			(( result[$dice]+=1 ))
 		;;
 		*)
 		printf "Error"
