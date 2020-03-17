@@ -51,13 +51,13 @@ do
 	if (( minimum>result[$rowCount]))
 	then
 		 minimum=result[$rowCount]
+		minIndex=$rowCount
 	fi
 	if (( maximum<result[$rowCount] ))
 	then
 		maximum=result[$rowCount]
+		maxIndex=$rowCount
 	fi
 done
 
-echo ${!result[@]}
-echo ${result[@]}
-printf "Maximum is : $maximum\nMinimum is : $minimum\n"
+printf "Maximum is at : $maxIndex\nMinimum is at : $minIndex\n"
