@@ -3,21 +3,21 @@
 read -p "Enter Number : " num
 case $num in
 	1)
-	echo "Unit"
+		echo "Unit"
 	;;
 	10)
-	echo "Ten"
+		echo "Ten"
 	;;
 	100)
-	echo "Hundred"
+		echo "Hundred"
 	;;
 	1000)
-	echo "Thousand"
+		echo "Thousand"
 	;;
 	100000)
-	echo "Lks"
+		echo "Lks"
 	;;
 	*)
-	echo "Unknown"
+		echo "Unknown"
 	;;
 esac
