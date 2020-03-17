@@ -21,43 +21,43 @@ do
 	birthMonth=$( monthsRan )
 	case $birthMonth in
 		1)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		2)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		3)
-		(( birthmonths[$birthMonth]+=1 ))
+			(( birthmonths[$birthMonth]+=1 ))
 		;;
 		4)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		5)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		6)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		7)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		8)
-		(( birthmonths[$birthMonths]+=1 ))
+			(( birthmonths[$birthMonths]+=1 ))
 		;;
 		9)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		10)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		11)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		12)
-		(( birthMonths[$birthMonth]+=1 ))
+			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		*)
-		echo "Invalid"
+			echo "Invalid"
 		;;
 	esac
 done
