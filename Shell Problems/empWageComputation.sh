@@ -14,10 +14,15 @@ MAX_WORKING_DAYS=20
 totalWorkingHrs=0
 totalWorkingDays=0
 
+function workHours(){
+	local check=$(( RANDOM%3 ))
+	echo $check
+}
+
 while (( $totalWorkingHrs<$MAX_WORKING_HRS && $totalWorkingDays<$MAX_WORKING_DAYS ))
 do
 	(( totalWorkingDays++ ))
-	randomCheck=$(( RANDOM%3 ))
+	randomCheck=$( workHours )
 		case $randomCheck in
 			$isPartTime)
 				empHours=4
