@@ -16,24 +16,26 @@ totalWorkingDays=0
 
 function workHours(){
 	local check=$(( RANDOM%3 ))
-	echo $check
+		case $check in
+			$isPartime)
+				empHour=4
+			;;
+			$isFullTime)
+				empHour=8
+			;;
+			*)
+				empHour=0
+			;;
+		esac
+	echo $empHour
 }
+
+
 
 while (( $totalWorkingHrs<$MAX_WORKING_HRS && $totalWorkingDays<$MAX_WORKING_DAYS ))
 do
 	(( totalWorkingDays++ ))
-	randomCheck=$( workHours )
-		case $randomCheck in
-			$isPartTime)
-				empHours=4
-			;;
-			$isFullTime)
-				empHours=8
-			;;
-			*)
-				empHours=0
-			;;
-		esac
+	empHours=$( workHours )
 	salary=$(( $empRatePerHour*$empHours ))
 	totalSalary=$(($totalSalary+$salary))
 	totalWorkingHrs=$(( $totalWorkingHrs+$empHours ))
