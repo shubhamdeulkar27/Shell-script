@@ -17,7 +17,7 @@ totalWorkingDays=0
 function workHours(){
 	local check=$(( RANDOM%3 ))
 		case $check in
-			$isPartime)
+			$isPartTime)
 				empHour=4
 			;;
 			$isFullTime)
@@ -39,4 +39,7 @@ do
 	salary=$(( $empRatePerHour*$empHours ))
 	totalSalary=$(($totalSalary+$salary))
 	totalWorkingHrs=$(( $totalWorkingHrs+$empHours ))
+	empDailyWage[$totalWorkingDays]=$salary
 done
+
+echo "Daily Wages ${empDailyWage[@]}"
