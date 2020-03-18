@@ -2,15 +2,23 @@
 
 printf "Welcome to Employee Wage Computation Program\n"
 
-isPresent=1
-randomCheck=$(( RANDOM%2 ))
+absent=0
+isPartTime=1
+isFullTime=2
+empRatePerHour=20
+randomCheck=$(( RANDOM%3 ))
 
-if (( $randomCheck==$isPresent ))
+if (( $absent==$randomCheck ))
 then
-	empRatePerHour=20
-	empHours=8
-	salary=$(( $empHours*$empRatePerHour ))
-else
-	salary=0
-fi
+		salary=0
 
+elif (( $isPartTime==$randomCheck ))
+then
+		empHours=4
+		salary=$(( $empHours*$empRatePerHour ))
+
+elif (( $isFullTime==$randomCheck ))
+then
+		empHours=8
+		salary=$(( $empHours*$empRatePerHour ))
+fi
