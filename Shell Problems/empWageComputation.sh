@@ -7,8 +7,10 @@ randomCheck=$(( RANDOM%2 ))
 
 if (( $randomCheck==$isPresent ))
 then
-	printf "Employee Is Present"
+	empRatePerHour=20
+	empHours=8
+	salary=$(( $empHours*$empRatePerHour ))
 else
-	printf "Employee is Not Present"
+	salary=0
 fi
 
