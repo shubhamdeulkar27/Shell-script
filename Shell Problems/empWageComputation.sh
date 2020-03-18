@@ -30,7 +30,7 @@ function workHours(){
 	echo $empHour
 }
 
-
+declare -A empDailyWage
 
 while (( $totalWorkingHrs<$MAX_WORKING_HRS && $totalWorkingDays<$MAX_WORKING_DAYS ))
 do
@@ -42,4 +42,6 @@ do
 	empDailyWage[$totalWorkingDays]=$salary
 done
 
+echo "Day ${!empDailyWage[@]}"
 echo "Daily Wages ${empDailyWage[@]}"
+
