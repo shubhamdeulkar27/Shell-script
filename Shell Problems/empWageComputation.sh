@@ -8,8 +8,15 @@ empRatePerHour=20
 numberOfWorkingDays=20
 totalSalary=0
 
-for (( day=1 ; day<=$numberOfWorkingDays ; day++ ))
+MAX_WORKING_HRS=100
+MAX_WORKING_DAYS=20
+
+totalWorkingHrs=0
+totalWorkingDays=0
+
+while (( $totalWorkingHrs<$MAX_WORKING_HRS && $totalWorkingDays<$MAX_WORKING_DAYS ))
 do
+	(( totalWorkingDays++ ))
 	randomCheck=$(( RANDOM%3 ))
 		case $randomCheck in
 			$isPartTime)
@@ -24,5 +31,5 @@ do
 		esac
 	salary=$(( $empRatePerHour*$empHours ))
 	totalSalary=$(($totalSalary+$salary))
+	totalWorkingHrs=$(( $totalWorkingHrs+$empHours ))
 done
-
