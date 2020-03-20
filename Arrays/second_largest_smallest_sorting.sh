@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 #FUNCTION FOR GENERATING RANDOM NUMBERS
-function genRandom(){
+function generateRandom(){
 		echo $(( 100+RANDOM%900 ))
 }
 
@@ -9,23 +9,24 @@ function genRandom(){
 counter=0
 while (( counter<10 ))
 do
-	Random[((counter++))]=$( genRandom )
+	Random[((counter++))]=$( generateRandom )
 done
 
 #SORTING
-temp=0
+temporary=0
 for (( i=0;i<counter;i++ ))
 do
 	for ((  j=0;j<counter;j++ ))
 	do
 		if (( ${Random[i]}<${Random[j]} ))
 		then
-			temp=${Random[i]}
+			temporary=${Random[i]}
 			Random[i]=${Random[j]}
-			Random[j]=$temp;
+			Random[j]=$temporary;
 		fi
 	done
 done
+echo ${Random[@]}
 
 #SECONDSMALLEST
 secondSmallest=${Random[1]}

@@ -47,5 +47,5 @@ do
 	fi
 done
 
-echo $smallest
+echo $secondLargest
 echo $secondSmallest
