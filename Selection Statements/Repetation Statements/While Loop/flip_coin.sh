@@ -2,7 +2,6 @@
 
 IS_HEAD=0
 IS_TAIL=1
-
 winHead=0
 winTail=0
 counter=0

@@ -5,6 +5,7 @@ IS_WIN=1
 IS_LOST=0
 countWin=0
 countBet=0
+
 while [[ $money -ge 0 || $money -le 200 ]]
 do
 	bet=$(( RANDOM%2 ))

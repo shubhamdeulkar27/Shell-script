@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
 printf "Think Any Number From 1 to 100\n"
-
 first=1
 mid=50
 last=100
