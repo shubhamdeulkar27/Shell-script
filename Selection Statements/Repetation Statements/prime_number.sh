@@ -1,11 +1,11 @@
 #!/bin/bash -x
 
-read -p "Enter the Number to Check : " num
+read -p "Enter the Number to Check : " number
 count=0
 
-for (( i=1 ; i<=num ; i++ ))
+for (( i=1 ; i<=number ; i++ ))
 do
-	if (( $num%$i==0 ))
+	if (( $number%$i==0 ))
 	then
 		(( count++ ))
 	fi

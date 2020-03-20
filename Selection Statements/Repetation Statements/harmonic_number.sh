@@ -1,9 +1,9 @@
 #!/bin/bash -x
-read -p "Enter the Number : " n
-H=1
-res=1
+read -p "Enter the Number : " number
+Harmonic=1
+result=1
 
-for (( i=2 ; i<=n ; i++ ))
+for (( i=2 ; i<=number ; i++ ))
 do
-	res=`echo "$res+$H/$i"|bc -l`
+	result=`echo "$result+$Harmonic/$i"|bc -l`
 done

@@ -16,7 +16,7 @@ do
 
 	if [ $count -eq 2 ]
 	then
-		printf "$i\t"
+		printf "$i "
 	fi
 done
 printf "\n"
