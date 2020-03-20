@@ -3,4 +3,4 @@
 read -p "Enter Unit Inches : " inch
 SCALE=12
 
-res=$(($inch/$SCALE))
+result=$(($inch/$SCALE))
