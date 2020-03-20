@@ -10,5 +10,4 @@ do
 	(( count++ ))
 	printf "$result "
 done
-
 printf "\n"
