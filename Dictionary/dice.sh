@@ -60,4 +60,4 @@ do
 	fi
 done
 
-printf "Maximum is at : $maxIndex\nMinimum is at : $minIndex\n"
+printf "Maximum occurances of : $maxIndex\nMinimum occurances of : $minIndex\n"

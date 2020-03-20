@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 #GENRATING MONTHS
-function monthsRan(){
+function monthsRandom(){
 	month=$(( 1+RANDOM%12 ))
 	echo $month
 }
@@ -18,7 +18,7 @@ done
 INDIVIDUALS=50
 for (( rowIndex=1;rowIndex<=INDIVIDUALS;rowIndex++ ))
 do
-	birthMonth=$( monthsRan )
+	birthMonth=$( monthsRandom )
 	case $birthMonth in
 		1)
 			(( birthMonths[$birthMonth]+=1 ))
@@ -42,7 +42,7 @@ do
 			(( birthMonths[$birthMonth]+=1 ))
 		;;
 		8)
-			(( birthmonths[$birthMonths]+=1 ))
+			(( birthmonths[$birthMonth]+=1 ))
 		;;
 		9)
 			(( birthMonths[$birthMonth]+=1 ))
