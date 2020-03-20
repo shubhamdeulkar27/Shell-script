@@ -2,10 +2,9 @@
 
 printf "Welcome to Employee Wage Computation Program\n"
 
-isPartTime=1
-isFullTime=2
-empRatePerHour=20
-numberOfWorkingDays=20
+IS_PART_TIME=1
+IS_FULL_TIME=2
+EMP_RATE_PER_HOUR=20
 totalSalary=0
 
 MAX_WORKING_HRS=100
@@ -17,10 +16,10 @@ totalWorkingDays=0
 function workHours(){
 	local check=$(( RANDOM%3 ))
 		case $check in
-			$isPartTime)
+			$IS_PART_TIME)
 				empHour=4
 			;;
-			$isFullTime)
+			$IS_FULL_TIME)
 				empHour=8
 			;;
 			*)
@@ -36,12 +35,8 @@ while (( $totalWorkingHrs<$MAX_WORKING_HRS && $totalWorkingDays<$MAX_WORKING_DAY
 do
 	(( totalWorkingDays++ ))
 	empHours=$( workHours )
-	salary=$(( $empRatePerHour*$empHours ))
+	salary=$(( $EMP_RATE_PER_HOUR*$empHours ))
 	totalSalary=$(($totalSalary+$salary))
 	totalWorkingHrs=$(( $totalWorkingHrs+$empHours ))
 	empDailyWage[$totalWorkingDays]=$salary
 done
-
-echo "Day ${!empDailyWage[@]}"
-echo "Daily Wages ${empDailyWage[@]}"
-
