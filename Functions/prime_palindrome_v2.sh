@@ -1,13 +1,13 @@
 #!/bin/bash -x
 
-read -p "Enter the Number : " num
+read -p "Enter the Number : " number
 
 function isPrime(){
 	count=0
-	num1=$1
-	for (( i=1 ; i<=$num1 ; i++ ))
+	number1=$1
+	for (( i=1 ; i<=$number1 ; i++ ))
 	do
-		if (( $num1%$i== 0 ))
+		if (( $number1%$i==0 ))
 		then
 			(( count++ ))
 		fi
@@ -38,11 +38,11 @@ function isPalindrome(){
 	fi
 }
 
-result=$( isPrime $num)
+result=$( isPrime $number)
 
 if (( $result==1 ))
 then
-	result2=$( isPalindrome $num )
+	result2=$( isPalindrome $number )
 	if (( $result2!=0 ))
 	then
 		result3=$( isPrime $result2 )

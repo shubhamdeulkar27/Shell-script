@@ -1,10 +1,10 @@
 #!/bin/bash -x
 
-read -p "Enter First Number : " num1
-read -p "Enter Second Number : " num2
+read -p "Enter First Number : " number1
+read -p "Enter Second Number : " number2
 
 function isPalindrome(){
-res=0
+result=0
 sum=0
 n1=$1
 n2=$2
@@ -17,14 +17,14 @@ done
 
 if [ $sum -eq $n2 ]
 then
-	res=1
-	echo "$res"
+	result=1
+	echo "$result"
 else
-	echo "$res"
+	echo "$result"
 fi
 }
 
-result="$( isPalindrome $num1 $num2)"
+result="$( isPalindrome $number1 $number2)"
 if [ $result -eq 1 ]
 then
 	printf "Number is Palindrome\n"
