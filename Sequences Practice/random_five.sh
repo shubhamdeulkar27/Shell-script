@@ -7,4 +7,4 @@ ran4=$((10+random%100))
 ran5=$((10+random%100))
 
 sum=$(($ran1+$ran2+$ran3+$ran4+$ran5))
-avg=$(($sum/5))
+average=$(($sum/5))
