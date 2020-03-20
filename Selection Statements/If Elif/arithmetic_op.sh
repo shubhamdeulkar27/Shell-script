@@ -5,41 +5,41 @@ read -p "Enter 2nd Number : " b
 read -p "Enter 3rd Number : "	c
 
 #PERFORMING ARITHMETIC OPERATION
-res1=$(($a+$b*$c))
-res2=$(($a%$b+$c))
-res3=$(($c+$a/$b))
-res4=$(($a*$b+$c))
+result1=$(($a+$b*$c))
+result2=$(($a%$b+$c))
+result3=$(($c+$a/$b))
+result4=$(($a*$b+$c))
 
 #FINDING MAXIMUM
-if [[ $res1 -gt $res2 ]] && [[ $res1 -gt $res3 ]] && [[ $res1 -gt $res4 ]]
+if [[ $result1 -gt $result2 ]] && [[ $result1 -gt $result3 ]] && [[ $result1 -gt $result4 ]]
 then
-	max=$res1
-elif [[ $res2 -gt $res1 ]] && [[ $res2 -gt $res3 ]] && [[ $res2 -gt $res4 ]]
+	max=$result1
+elif [[ $result2 -gt $result1 ]] && [[ $result2 -gt $result3 ]] && [[ $result2 -gt $result4 ]]
 then
-	max=$res2
-elif [[ $res3 -gt $res1 ]] && [[ $res3 -gt $res2 ]] && [[ $res3 -gt $res4 ]]
+	max=$result2
+elif [[ $result3 -gt $result1 ]] && [[ $result3 -gt $result2 ]] && [[ $result3 -gt $result4 ]]
 then
-	max=$res3
-elif [[ $res4 -gt $res1 ]] && [[ $res4 -gt $res2 ]] && [[ $res4 -gt $res3 ]]
+	max=$result3
+elif [[ $result4 -gt $result1 ]] && [[ $result4 -gt $result2 ]] && [[ $result4 -gt $result3 ]]
 then
-	max=$res4
+	max=$result4
 else
 	printf "Error"
 fi
 
 #FINDING MINIMUM
-if [[ $res1 -lt $res2 ]] && [[ $res1 -lt $res3 ]] && [[ $res1 -lt $res4 ]]
+if [[ $result1 -lt $result2 ]] && [[ $result1 -lt $result3 ]] && [[ $result1 -lt $result4 ]]
 then
-	min=$res1
-elif [[ $res2 -lt $res1 ]] && [[ $res2 -lt $res3 ]] && [[ $res2 -lt $res4 ]]
+	min=$result1
+elif [[ $result2 -lt $result1 ]] && [[ $result2 -lt $result3 ]] && [[ $result2 -lt $result4 ]]
 then
-	min=$res2
-elif [[ $res3 -lt $res1 ]] && [[ $res3 -lt $res2 ]] && [[ $res3 -lt $res4 ]]
+	min=$result2
+elif [[ $result3 -lt $result1 ]] && [[ $result3 -lt $result2 ]] && [[ $result3 -lt $result4 ]]
 then
-	min=$res3
-elif [[ $res4 -lt $res1 ]] && [[ $res4 -lt $res2 ]] && [[ $res4 -lt $res3 ]]
+	min=$result3
+elif [[ $result4 -lt $result1 ]] && [[ $result4 -lt $result2 ]] && [[ $result4 -lt $result3 ]]
 then
-	min=$res4
+	min=$result4
 else
 	printf "Error"
 fi

@@ -1,35 +1,35 @@
 #!/bin/bash -x
 
-read -p "Enter any One Digit Number : " num
+read -p "Enter any One Digit Number : " number
 
-if [ $num -eq 0 ]
+if [ $number -eq 0 ]
 then
 	printf "Zero\n"
-elif [ $num -eq 1 ]
+elif [ $number -eq 1 ]
 then
 	printf "One\n"
-elif [ $num -eq 2 ]
+elif [ $number -eq 2 ]
 then
 	printf "Two\n"
-elif [ $num -eq 3 ]
+elif [ $number -eq 3 ]
 then
 	printf "Three\n"
-elif [ $num -eq 4 ]
+elif [ $number -eq 4 ]
 then
 	printf "Four\n"
-elif [ $num -eq 5 ]
+elif [ $number -eq 5 ]
 then
 	printf "Five\n"
-elif [ $num -eq 6 ]
+elif [ $number -eq 6 ]
 then
 	printf "Six\n"
-elif [ $num -eq 7 ]
+elif [ $number -eq 7 ]
 then
 	printf "Seven\n"
-elif [ $num -eq 8 ]
+elif [ $number -eq 8 ]
 then
 	printf "Eight\n"
-elif [ $num -eq 9 ]
+elif [ $number -eq 9 ]
 then
 	printf "Nine\n"
 else
