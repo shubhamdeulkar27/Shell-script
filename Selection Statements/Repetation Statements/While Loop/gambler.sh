@@ -1,23 +1,23 @@
 #!/bin/bash -x
 
 money=100
-WIN=1
-LOST=0
-counterW=0
-counterB=0
+IS_WIN=1
+IS_LOST=0
+countWin=0
+countBet=0
 while [[ $money -ge 0 || $money -le 200 ]]
 do
 	bet=$(( RANDOM%2 ))
-	(( counterB++ ))
-	if [ $bet -eq $WIN ]
+	(( countBet++ ))
+	if [ $bet -eq $IS_WIN ]
 	then
-		(( counterW++ ))
+		(( countWin++ ))
 		(( money++ ))
 		if [ $money -eq 200 ]
 		then
 			break;
 		fi
-	elif [ $bet -eq $LOST ]
+	elif [ $bet -eq $IS_LOST ]
 	then
 		(( money-- ))
 		if [ $money -eq 0 ]
@@ -27,3 +27,5 @@ do
 	fi
 done
 
+echo "Number of Wins : $countWin"
+echo "Number of Bets : $countBet"

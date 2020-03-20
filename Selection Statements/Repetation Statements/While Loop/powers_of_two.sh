@@ -1,14 +1,14 @@
 #!/bin/bash -x
 
-num=$1
-res=1
+number=$1
+result=1
 count=1
 
-while [[ $count -le $num ]]
+while [[ $count -le $number ]]
 do
-	(( res=res*2 ))
+	(( result=result*2 ))
 	(( count++ ))
-	printf "$res "
+	printf "$result "
 done
 
 printf "\n"
