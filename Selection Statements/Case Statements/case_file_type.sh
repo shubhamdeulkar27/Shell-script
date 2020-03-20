@@ -3,8 +3,8 @@
 for filename in $(ls)
 do
 	#TAKE THE EXTENTION
-	ext=${filename##*\.}
-	case "$ext" in
+	extention=${filename##*\.}
+	case "$extention" in
 		java)
 			 echo "$filename : Java Source File"
 		;;

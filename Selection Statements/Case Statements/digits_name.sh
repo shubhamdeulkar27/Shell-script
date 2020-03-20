@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
-read -p "Enter Number : " num
-case $num in
+read -p "Enter Number : " number
+case $number in
 	1)
 		echo "Unit"
 	;;
